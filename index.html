@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudantes de LCC3T</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: Arial, sans-serif;">
+    <div class="container" id="wave-effect">
+        <!-- Exibição da hora do sistema -->
+        <div id="system-time" style="text-align: center; margin-bottom: 20px; font-weight: bold; font-size: 18px;"></div>
+
+        <!-- Lado esquerdo com o formulário e logotipo -->
+        <div class="left-side">
+            <!-- Hora exibida dinamicamente -->
+            <div class="time-container">
+                <span id="current-time"></span>
+            </div>
+        
+            <!-- Logotipo centralizado -->
+            <div class="logo-container">
+                <img src="unnamed.png" alt="Logo do Imetro" class="logo">
+            </div>
+            
+            <form id="studentForm">
+                <div class="titulo">
+                    <center>
+                        <h2 style="font-size: 200%;">LCC3T DA IMETRO</h2><br>
+                    </center>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nome do Estudante</label>
+                    <input type="text" id="name" placeholder="Nome do estudante">
+                </div>
+                <div class="form-group">
+                    <label for="matricula">Número de Matrícula</label>
+                    <input type="text" id="matricula" placeholder="Número de matrícula">
+                </div>
+                <div class="buttons">
+                   <button type="button" onclick="assignGrades()">Atribuir</button>
+                    <button type="button" onclick="clearForm()" style="display: none;">Limpar</button>
+                    <!-- <button type="button" onclick="saveGrades()">Guardar</button>-->
+                    <button type="button" onclick="viewGrades()">Consultar</button>
+                </div>
+            </form>
+        </div>
+        
+        
+        
+        <!-- Lado direito com a imagem gif -->
+        <div class="right-side">
+            <img src="http://www.imetroangola.com/img/3.jpeg" alt="Imagem Animada">
+
+            <!-- Janela popup para exibir as notas -->
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <h3>Notas dos Estudantes</h3>
+                    <ul id="resultList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; LCC3M Angola 2024 |
+        <a href="http://www.imetroangola.com" >IMETRO_Angola_</style="color: blue (240, 229, 229); text-decoration: underline;">Visite nosso site</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
